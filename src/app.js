@@ -7,6 +7,8 @@ const geocode = require("./utils/geocode");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const staticFiles = path.join(__dirname,"../public");
 const tempaltePath = path.join(__dirname,"../templates/views");
 const partialpath =  path.join(__dirname,"../templates/partials");
@@ -107,6 +109,6 @@ app.get("*",(req,res)=>{
         c: "red"
     });
 });
-app.listen(3001,()=> {
+app.listen(port,()=> {
     console.log("Server started");
 })
