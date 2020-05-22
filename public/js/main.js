@@ -7,10 +7,9 @@ function submitForm(e){
     let p2= document.querySelector("#mess2");
     let p3= document.querySelector("#mess3");
     let icon= document.querySelector(".icon");
-    debugger;
-    p1.innerText = "Loading ...."
-    p2.innerText = ""
-    p3.innerText = ""
+    p1.innerText = "Loading ....";
+    p2.innerText = "";
+    p3.innerText = "";
     icon.style.display = "none";
     fetch(`/weather?address=${location}`).then((res)=>{
     res.json().then((data)=> {
