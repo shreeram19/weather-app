@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="/img/weather.png">
+    <title> {{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+    <div class="main-content"> {{>header}}
+        <p>Use this page to get your content</p>
+    </div>
+    <form>
+        <input type="text">
+        <button onclick="submitForm(event)">Search</button>
+    </form>
+    <p id="mess1"></p>
+    <p id="mess2"></p><img class="icon" src="" alt="" style="display:none">
+    <p id="mess3"></p>
+    
+    </p>
+    {{>footer}}
+</body>
+
+</html>
