@@ -81,12 +81,7 @@ app.get("/weather",(req,res)=> {
                     region: region,
                     current : current
                 });
-                // console.log(head(`Weather Forcast\n`));
-                // console.log(`URL:${url}`);
-                // console.log(`Long: ${long}`);
-                // console.log(`Lat: ${lat}`);
-                // console.log(`\nRegion: ${region}`)
-                // console.log(`The current temp is ${current.temperature} but it feels like ${current.feelslike}`);
+                
             });
         
     });
