@@ -87,6 +87,7 @@ app.get("/weather",(req,res)=> {
     });
    
 });
+
 app.get("/help/*",(req,res)=>{
     res.render("404",{
         title:"404",
