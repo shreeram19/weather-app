@@ -10,10 +10,11 @@
 
 <body>
     <div class="main-content"> {{>header}}
-        <p>Use this page to get your content</p>
-    
+        <p>Use This page to get your Weather</p>
+    <button id="location" onclick="getWeather(event)">Current Weather Location</button>
+    <br>
     <form>
-        <input type="text">
+        <input placeholder="Enter a location" type="text">
         <button onclick="submitForm(event)">Search</button>
     </form>
     </div>

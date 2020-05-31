@@ -38,6 +38,27 @@ app.get("/about",(req,res)=> {
         
     });
 });
+
+app.get("/currentWeather",(req,res)=> {
+    let lat = req.query.lat;
+    let long = req.query.long;
+    console.log(lat,long);
+    weather(long, lat, (e, response) => {
+        const data = response.body;
+        let {region} = data.location;
+        let {current} = data;
+        console.log(response.body);
+        return res.send({
+            address: response.body.location.name,
+            long: long,
+            lat: lat,
+            region: region,
+            current : current
+        });
+        
+    });
+
+});
 app.get("/weather",(req,res)=> {
 
     if(!req.query.address){
@@ -70,7 +91,7 @@ app.get("/weather",(req,res)=> {
             let long = center[1]
             console.log(`Lat: ${center[1]}`);
             let lat = center[0];
-            weather(long, lat, (e, response) => {
+            weather(lat, long, (e, response) => {
                 const data = response.body;
                 let {region} = data.location;
                 let {current} = data;
